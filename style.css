@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav {
+  padding: 20px;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  gap: 24px;
+}
+
+.menu-item {
+  position: relative;
+  padding: 20px;
+  background: blue;
+}
+
+.menu-item:hover .menu-lvl-1 {
+  display: block;
+}
+
+.menu-lvl-1 {
+  position: absolute;
+  left: 0;
+  top: 100%;
+
+  display: none;
+  width: 200px;
+  background: lightblue;
+}
+
+.nested-item {
+  position: relative;
+  padding: 10px;
+}
+
+.nested-item:hover > .menu-lvl-2 {
+  display: block;
+}
+
+.menu-lvl-2 {
+  position: absolute;
+  top: 0;
+  left: 100%;
+
+  display: none;
+  width: 200px;
+  background: lightblue;
+}
